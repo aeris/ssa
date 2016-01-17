@@ -18,9 +18,12 @@ body {
 
 	width: 100%;
 	margin: auto;
-	line-height:1.6;
 
-	padding-bottom: 100px;
+	padding-bottom: 25px;
+}
+
+img {
+	vertical-align: middle;
 }
 
 body > header {
@@ -29,20 +32,34 @@ body > header {
 	color: $header-color;
 	padding: 10px 20px 10px 50px;
 	font-size: $header-font-size;
+	display: flex;
+	display: -webkit-flex;
+
+	div {
+		-webkit-flex: 1;
+		flex: 1;
+	}
 
 	ul {
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
-		float: right;
+		-webkit-flex: none;
+		flex: none;
 
 		li {
 			display: inline;
+			position: relative;
 		}
 	}
 }
 
-body > #content {
+#content {
 	margin: auto;
 	max-width: 650px;
+	line-height:1.6;
+}
+
+#comments {
+	margin-top: 50px;
 }
