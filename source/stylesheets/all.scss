@@ -14,7 +14,7 @@ html {
 body {
 	background-color: $primary-bg;
 	color: $text-color;
-	font-size: $font-size-base;
+	font-size: $font-size;
 
 	width: 100%;
 	margin: auto;
@@ -28,7 +28,7 @@ body > header {
 	background-color: $header-bg;
 	color: $header-color;
 	padding: 10px 20px 10px 50px;
-	font-size: 30px;
+	font-size: $header-font-size;
 
 	ul {
 		list-style-type: none;
