@@ -86,7 +86,10 @@
 	Falls jemand, der oder die diesen Beitrag liest, mehr darüber weiß: Lass es uns bitte wissen.
 
 %p
-	Liebe Journalistinnen, liebe Journalisten: Ihr könnt %a{href: 'mailto:ssa@kubieziel.de'} uns gerne kontaktieren, wenn das für die Berichterstattung hilfreich ist.
+	Liebe Journalistinnen, liebe Journalisten: Ihr könnt
+	= succeed ',' do
+		%a{href: 'mailto:ssa@kubieziel.de'} uns gerne kontaktieren
+	wenn das für die Berichterstattung hilfreich ist.
 
 %h1 Signaturen
 = partial 'sign'
