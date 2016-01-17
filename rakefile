@@ -1,0 +1,9 @@
+task default: :deploy
+
+task :build do
+	system 'bundle exec middleman build'
+end
+
+task deploy: :build do
+	system 'rsync -axPv build/ server:www/ --exclude "glyphicons-*"'
+end

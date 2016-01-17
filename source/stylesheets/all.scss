@@ -1,0 +1,48 @@
+@import 'mixins';
+@import 'theme';
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+html {
+	font-family: Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+	background-color: $primary-bg;
+	color: $text-color;
+	font-size: $font-size-base;
+
+	width: 100%;
+	margin: auto;
+	line-height:1.6;
+
+	padding-bottom: 100px;
+}
+
+body > header {
+	width: 100%;
+	background-color: $header-bg;
+	color: $header-color;
+	padding: 10px 20px 10px 50px;
+	font-size: 30px;
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		float: right;
+
+		li {
+			display: inline;
+		}
+	}
+}
+
+body > #content {
+	margin: auto;
+	max-width: 650px;
+}
