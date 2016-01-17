@@ -1,20 +1,16 @@
 %header
 	%div
-		Twitter State Sponsored Attack
+		= link_to 'Twitter State Sponsored Attack', url_for('/')
 	%ul
 		%li<
-			= link_to 'index.html' do
-				= image_tag 'en.png', alt: 'EN'
+			= link_to 'English', url_for('index.html')
 		%li<
-			= link_to 'de.html' do
-				= image_tag 'de.png', alt: 'DE'
+			= link_to 'German', url_for('de.html')
 		%li<
-			= link_to 'fr.html' do
-				= image_tag 'fr.png', alt: 'FR'
+			= link_to 'French', url_for('fr.html')
 		%li<
-			= link_to 'it.html' do
-				= image_tag 'it.png', alt: 'IT'
+			= link_to 'Italian', url_for('it.html')
 		%li<
-			= link_to 'press.html' do
-				= image_tag 'press.png', alt: 'Press'
+			| 
+			= link_to 'Press coverage', url_for('press.html')
 
