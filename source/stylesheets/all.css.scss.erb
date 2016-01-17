@@ -20,14 +20,22 @@ body {
 
 	padding-bottom: 25px;
 
-	background-image: url("<%= image_path 'bg.png' %>");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
+	//background-image: url("<%= image_path 'bg.png' %>");
+	//background-repeat: no-repeat;
+	//background-attachment: fixed;
+	//background-position: center;
 }
 
 img {
 	vertical-align: middle;
+
+	&.center {
+		margin-top: 20px;
+	}
+}
+
+div.center {
+	text-align: center;
 }
 
 body > header {
@@ -42,14 +50,31 @@ body > header {
 	div {
 		-webkit-flex: 1;
 		flex: 1;
+
+		a {
+			color: $header-link-color;
+			text-decoration: none;
+		}
 	}
 
 	ul {
+		font-size: 0.65em;
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
 		-webkit-flex: none;
 		flex: none;
+
+		a {
+			color: $header-link-color;
+
+			&:visited {
+				color: $header-link-color-visited;
+			}
+			&:hover {
+				color: $header-link-color-hover;
+			}
+		}
 
 		li {
 			display: inline;
@@ -60,7 +85,7 @@ body > header {
 
 #content {
 	margin: auto;
-	max-width: 650px;
+	max-width: $body-width;
 	margin-top: 25px;
 	line-height:1.6;
 }

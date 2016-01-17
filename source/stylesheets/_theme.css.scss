@@ -7,8 +7,9 @@ $link-color-hover: darken($link-color, 25%);
 
 $header-bg: #6cadde;
 $header-color: #fff;
-$header-link-color: #fff;
-$header-link-color-hover: darken($header-link-color, 25%);
+$header-link-color: $header-color;
+$header-link-color-visited: darken($header-link-color, 15%);
+$header-link-color-hover: $text-color;
 
 $font-size: 15px;
 $header-font-size: 25px;
@@ -18,4 +19,4 @@ $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1200px;
 
-$body-width: 960px;
+$body-width: $screen-sm;
