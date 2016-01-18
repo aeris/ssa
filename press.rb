@@ -9,6 +9,7 @@ LANG = {
 		de: 'Deutsch',
 		en: 'English',
 		es: 'Español',
+		fa: 'فارسی',
 		fi: 'Suomi',
 		fr: 'Français',
 		gr: 'Ελληνικά',
@@ -49,8 +50,8 @@ content.sort do |a, b|
 end.each do |lang, days|
 	lang = lang.to_sym
 	lines << [
-			"= image_tag '#{lang}_big.png', alt: '#{lang.upcase}'",
-			LANG[lang.to_sym],
+			#"= image_tag '#{lang}_big.png', alt: '#{lang.upcase}'",
+			"%b\##{lang} #{LANG[lang.to_sym]}",
 			'%ul'
 	]
 
