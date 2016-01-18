@@ -6,6 +6,10 @@
 		= link_to 'Twitter einige seiner Nutzer_innen darauf hingewiesen hat', '/notice.html'
 	dass ihre Twitter-Accounts möglicherweise Ziel eines Hackerangriffs geworden sind, hinter dem staatlich unterstützte Täter_innen stehen. Einige von uns, die diese Meldung erhalten haben, haben dies auf Twitter veröffentlicht, andere haben die Medien kontaktiert. Der Vorfall hat für einige Aufmerksamkeit und viele Fragen gesorgt.
 
+%div.center
+	%a{href: image_path('notice_de.png'), data: { lightbox: :notice_de, title: 'Twitter notice' }}
+		= image_tag 'notice_de_small.png', alt: 'Twitter notice'
+
 %p
 	Wir hatten gehofft, nach und nach mehr herauszufinden. Einige von uns haben Twitter Fragen geschickt. Wir haben erwartet, dass die Geschichte von Journalist_innen aufgegriffen werden würde, die zwischen den Zeilen lesen, einen Zusammenhang der Mitteilung von Twitter mit ähnlichen anderer Unternehmen erkennen, oder auf anderem Weg Informationen von oder über Twitter erhalten würden.
 
@@ -94,7 +98,7 @@
 		%a{href: 'mailto:ssa@kubieziel.de'} uns gerne kontaktieren
 	wenn das für die Berichterstattung hilfreich ist.
 
-%h1 Signaturen
+%h1 Unterschriften
 = partial 'sign'
 
 = partial 'comments'
