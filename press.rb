@@ -2,6 +2,28 @@
 require 'open-uri'
 require 'csv'
 require 'awesome_print'
+
+LANG = {
+		ar: 'العربية',
+		bg: 'български език',
+		de: 'Deutsch',
+		en: 'English',
+		es: 'Español',
+		fi: 'Suomi',
+		fr: 'Français',
+		gr: 'Ελληνικά',
+		il: 'עברית',
+		it: 'Italiano',
+		nl: 'Nederlands',
+		no: 'Norsk',
+		pl: 'Polski',
+		pt: 'Português',
+		ro: 'Română',
+		ru: 'русский язык',
+		tr: 'Türkçe',
+		vn: 'Tiếng Việt'
+}
+
 csv     = CSV.new open 'https://framacalc.org/ssa_press.csv'
 content = {}
 lang    = nil
@@ -17,20 +39,18 @@ csv.each do |row|
 		content[lang][day] << row
 	end
 end
-# content = content.map do |lang, date|
-# 	articles.sort! do |a, b|
-# 		a, b = a.first, b.first
-# 		next 1 unless a
-# 		next -1 unless b
-# 		b <=> a
-# 	end
-# 	[lang, articles]
-# end.to_h
 
 lines = []
-content.each do |lang, days|
+content.sort do |a, b|
+	count = Proc.new { |x| x.collect { |x| x.size }.inject :+ }
+	a = count.call a
+	b = count.call b
+	b <=> a
+end.each do |lang, days|
+	lang = lang.to_sym
 	lines << [
 			"= image_tag '#{lang}_big.png', alt: '#{lang.upcase}'",
+			LANG[lang.to_sym],
 			'%ul'
 	]
 
