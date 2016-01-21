@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 require 'open-uri'
 require 'csv'
-require 'awesome_print'
 
 LANG = {
 		ar: 'العربية',
